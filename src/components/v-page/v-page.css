@@ -1,0 +1,12 @@
+:host{
+  height:100%;
+  display:block;
+}
+.v-page{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  .v-section{
+    flex:1;
+  }
+}

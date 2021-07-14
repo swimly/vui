@@ -1,0 +1,64 @@
+:host{
+  display:block;
+}
+.v-button{
+  display:flex;
+  background-color: v(border-default);
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border:none;
+  outline:none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  color: v(text-regular);
+  position:relative;
+  &::before{
+    content:"";
+    display: block;
+    position:absolute;
+    left:0;
+    top:0;
+    border:1px solid v(border-default);
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+  }
+  &[conner]{
+    border-radius: 4px;
+    &::before{
+      border-radius: inherit;
+    }
+  }
+  &[rounder]{
+    border-radius: 44px;
+    &::before{
+      border-radius: inherit;
+    }
+  }
+  &[type=primary]{
+    background-color: v(color-primary);
+    color: v(text-white);
+    &::before{
+      border-color: v(color-primary);
+    }
+    &[outline]{
+      background-color: v(background-white);
+      color: v(color-primary);
+    }
+  }
+  &[type=danger]{
+    background-color: v(color-danger);
+    color: v(text-white);
+    &::before{
+      border-color: v(color-danger);
+    }
+    &[outline]{
+      background-color: v(background-white);
+      color: v(color-danger);
+    }
+  }
+}

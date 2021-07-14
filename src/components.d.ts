@@ -13,6 +13,9 @@ export namespace Components {
         "type": string;
     }
     interface VIcon {
+        "name": string;
+        "path": string;
+        "view": number;
     }
     interface VNavbar {
     }
@@ -77,6 +80,9 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface VIcon {
+        "name"?: string;
+        "path"?: string;
+        "view"?: number;
     }
     interface VNavbar {
     }

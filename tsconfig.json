@@ -19,7 +19,7 @@
   },
   "include": [
     "src"
-  ],
+, "docs/assets/libs/iconfont.js"  ],
   "exclude": [
     "node_modules"
   ]

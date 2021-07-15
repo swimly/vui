@@ -1,3 +1,6 @@
 :host {
-  display: block;
+  display: inline-block;
+}
+.v-icon{
+  display:inline-block;
 }

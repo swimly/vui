@@ -1,6 +1,10 @@
 - [更新日志](docs/update.md)
+- 布局
+  - [Row 栅栏](src/components/v-row/README.md)
 - 通用
+  - [Icon 图标](src/components/v-icon/README.md)
   - [Button 按钮](src/components/v-button/README.md)
+  - [Radio 单选](src/components/v-radio/README.md)
   - [Page 布局](src/components/v-page/README.md)
   - [Navbar 头部导航栏](src/components/v-navbar/README.md)
   - [Tabbar 底部导航](src/components/v-tabbar/README.md)

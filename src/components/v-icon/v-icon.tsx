@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop, Element } from '@stencil/core';
-
+import svg from './asets/iconfont.js'
 @Component({
   tag: 'v-icon',
   styleUrl: 'v-icon.css',
@@ -10,13 +10,21 @@ export class VIcon {
   @Prop() view: number = 1024
   @Prop() path: string
   @Prop() name: string
+  @Prop() size: number = 16
+  @Prop() color: string
   componentDidLoad () {
+    this.parseStringtoDom()
     this.renderIcon()
   }
   render() {
-    const {view} = this
+    const {view, size, color} = this
+    const style = {
+      width: `${size}px`,
+      height: `${size}px`,
+      color: color
+    }
     return (
-      <Host>
+      <Host style={style}>
         <svg class="v-icon" aria-hidden="true" viewBox={`0 0 ${view} ${view}`}>
           {this.renderCore()}
         </svg>
@@ -34,6 +42,13 @@ export class VIcon {
         <use id="use"/>
       )
     }
+  }
+  parseStringtoDom () {
+    const dom = document.createElement('div')
+    dom.innerHTML = svg
+    const s = dom.childNodes[0] as SVGElement
+    s.style.display = 'none'
+    this.el.shadowRoot.appendChild(s)
   }
   renderIcon () {
     const {path, name} = this

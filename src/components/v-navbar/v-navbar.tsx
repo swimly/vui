@@ -12,6 +12,7 @@ export class VNavbar {
       <Host>
         <div class="v-navbar">
           <div class="v-navbar-prefix">
+            <v-icon name="arrow-left"></v-icon>
           </div>
           <div class="v-navbar-content">
             <h2 class="v-navbar-title"><slot></slot></h2>

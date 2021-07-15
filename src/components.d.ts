@@ -17,8 +17,13 @@ export namespace Components {
     interface VCalendar {
     }
     interface VCheckbox {
+        "check": (v: any) => Promise<void>;
+        "checked": boolean;
+        "val": () => Promise<string>;
+        "value": string;
     }
     interface VCheckboxGroup {
+        "value": any;
     }
     interface VCol {
         "span": number;
@@ -43,6 +48,9 @@ export namespace Components {
         "view": number;
     }
     interface VInput {
+        "placeholder": string;
+        "type": string;
+        "value": string;
     }
     interface VKeyboard {
     }
@@ -90,6 +98,7 @@ export namespace Components {
     interface VSwiperItem {
     }
     interface VSwitch {
+        "checked": boolean;
     }
     interface VTab {
     }
@@ -400,8 +409,13 @@ declare namespace LocalJSX {
     interface VCalendar {
     }
     interface VCheckbox {
+        "checked"?: boolean;
+        "onVchange"?: (event: CustomEvent<any>) => void;
+        "value"?: string;
     }
     interface VCheckboxGroup {
+        "onVchange"?: (event: CustomEvent<any>) => void;
+        "value"?: any;
     }
     interface VCol {
         "span"?: number;
@@ -426,6 +440,9 @@ declare namespace LocalJSX {
         "view"?: number;
     }
     interface VInput {
+        "placeholder"?: string;
+        "type"?: string;
+        "value"?: string;
     }
     interface VKeyboard {
     }
@@ -472,6 +489,8 @@ declare namespace LocalJSX {
     interface VSwiperItem {
     }
     interface VSwitch {
+        "checked"?: boolean;
+        "onVchange"?: (event: CustomEvent<any>) => void;
     }
     interface VTab {
     }

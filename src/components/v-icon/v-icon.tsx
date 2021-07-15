@@ -21,11 +21,11 @@ export class VIcon {
     const style = {
       width: `${size}px`,
       height: `${size}px`,
-      color: color
+      color: color ? color : 'currentColor'
     }
     return (
       <Host style={style}>
-        <svg class="v-icon" aria-hidden="true" viewBox={`0 0 ${view} ${view}`}>
+        <svg fill='currentColor' class="v-icon" aria-hidden="true" viewBox={`0 0 ${view} ${view}`}>
           {this.renderCore()}
         </svg>
       </Host>

@@ -1,3 +1,30 @@
-:host {
-  display: block;
+:host,.v-input{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid v(border-default);
+  height: 36px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: v(text-default);
+}
+.v-input{
+  &-content{
+    flex:1;
+    overflow:hidden;
+    padding: 0 12px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  &-core{
+    outline:none;
+    flex:1;
+    background:none;
+    font-size:inherit;
+    color:inherit;
+    border:none;
+    outline:none;
+    font-family: inherit;
+  }
 }
